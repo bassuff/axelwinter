@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="Astro description">
@@ -17,7 +17,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-white transition duration-500 dark:bg-gray-900">
 		<slot />
 	</body>
 </html>
@@ -25,13 +25,45 @@ const { title } = Astro.props;
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--color-black: #000;
+		--color-white: #fff;
+		--color-slate-500: #a9adc1;
+		--color-gray-100: #f7f7f7;
+		--color-gray-200: #e6e9ee;
+		--color-gray-300: #dde0e4;
+		--color-gray-400: #818890;
+		--color-gray-500: #535661;
+		--color-gray-600: #4b4c53;
+		--color-gray-700: #3a3d4a;
+		--color-gray-800: #2e3039;
+		--color-gray-900: #1f2028;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+	.dark .text-inverse, .light {
+		--bg-primary: var(--color-white);
+		--bg-secondary: var(--color-gray-100);
+		--bg-alt: var(--color-gray-200);
+		--border-secondary: var(--color-gray-200);
+		--text-primary: var(--color-black);
+		--text-secondary: var(--color-gray-500);
+		color-scheme: light;
+	}
+	.dark, .light .text-inverse {
+		--bg-primary: var(--color-gray-900);
+		--bg-secondary: var(--color-gray-800);
+		--bg-alt: var(--color-gray-700);
+		--border-secondary: var(--color-gray-600);
+		--text-primary: var(--color-white);
+		--text-secondary: var(--color-slate-500);
+		color-scheme: dark;
+	}
+	:is(.dark .dark\:bg-gray-900) {
+		background-color: var(--color-gray-900);
 	}
 </style>

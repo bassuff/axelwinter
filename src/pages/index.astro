@@ -3,6 +3,11 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Axel Winter">
+	<div class="container mx-auto">
+		<nav class="text-right">
+			<button id="switch-mode">switch mode</button>
+		</nav>
+	</div>
 	<main>
 		<h1 class="text-3xl text-gradient">Axel Winter</h1>
 	</main>
@@ -10,6 +15,20 @@ import Layout from '../layouts/Layout.astro';
 		<span>© Axel Winter 2023</span>
 	</footer>
 </Layout>
+
+<script>
+	function toggleMode () {
+		const html = document.documentElement;
+		if (html.classList.contains('light')) {
+			html.classList.remove("light");
+			html.classList.add("dark");
+		} else {
+			html.classList.remove("dark");
+			html.classList.add("light");
+		}
+	}
+	document.getElementById("switch-mode").addEventListener("click", toggleMode);
+</script>
 
 <style>
 	main {
@@ -27,7 +46,7 @@ import Layout from '../layouts/Layout.astro';
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
-		background-position: 0%;
+		background-position: 0;
 	}
 	footer {
 		margin: auto;
