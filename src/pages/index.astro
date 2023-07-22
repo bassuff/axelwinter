@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const d = new Date();
+const year = d.getFullYear();
 ---
 
 <Layout title="Axel Winter">
@@ -12,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
 		<h1 class="text-3xl text-gradient">Axel Winter</h1>
 	</main>
 	<footer>
-		<span>© Axel Winter 2023</span>
+		<span>© Axel Winter {year}</span>
 	</footer>
 </Layout>
 

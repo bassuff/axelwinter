@@ -1,14 +1,15 @@
 {
   "name": "axelwinter",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint \"src/**/*.{js,astro}\""
+    "build": "astro build",
+    "dev": "astro dev",
+    "lint": "eslint \"src/**/*.{js,astro}\"",
+    "preview": "astro preview",
+    "push": "npm version patch && git push",
+    "start": "astro dev"
   },
   "dependencies": {
     "@astrojs/tailwind": "4.0.0",
