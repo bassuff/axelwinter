@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ColorScheme from '../components/ColorScheme.astro';
 const d = new Date();
 const year = d.getFullYear();
 ---
@@ -7,7 +8,7 @@ const year = d.getFullYear();
 <Layout title="Axel Winter">
 	<div class="container mx-auto">
 		<nav class="text-right">
-			<button id="switch-mode">switch mode</button>
+			<ColorScheme title="switch mode" />
 		</nav>
 	</div>
 	<main>
@@ -17,20 +18,6 @@ const year = d.getFullYear();
 		<span>© Axel Winter {year}</span>
 	</footer>
 </Layout>
-
-<script>
-	function toggleMode () {
-		const html = document.documentElement;
-		if (html.classList.contains('light')) {
-			html.classList.remove("light");
-			html.classList.add("dark");
-		} else {
-			html.classList.remove("dark");
-			html.classList.add("light");
-		}
-	}
-	document.getElementById("switch-mode").addEventListener("click", toggleMode);
-</script>
 
 <style>
 	main {
