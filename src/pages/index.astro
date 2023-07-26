@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ColorScheme from '../components/ColorScheme.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 const d = new Date();
 const year = d.getFullYear();
 ---
@@ -8,7 +8,7 @@ const year = d.getFullYear();
 <Layout title="Axel Winter">
 	<div class="container mx-auto">
 		<nav class="text-right">
-			<ColorScheme title="switch mode" />
+			<ThemeToggle />
 		</nav>
 	</div>
 	<main>
