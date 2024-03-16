@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-  <circle cx="100" cy="125" r="50" fill="none" stroke-width="10" class="initials"/>
-  <path d="M150 125a1 1 0 0 0 100 0" fill="none" stroke-width="10" class="initials"/>
-  <path stroke="#7E3BED" stroke-width="10" d="M45 225h210"/>
+  <circle cx="100" cy="125" r="50" fill="none" stroke-width="20" class="initials"/>
+  <path d="M150 125a1 1 0 0 0 100 0" fill="none" stroke-width="20" class="initials"/>
+  <path stroke="#7E3BED" stroke-width="20" d="M40 225h220"/>
   <style>
     .initials{stroke:#000}@media (prefers-color-scheme:dark){.initials{stroke:#fff}}
   </style>
