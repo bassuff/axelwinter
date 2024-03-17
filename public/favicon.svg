@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-  <circle cx="95" cy="150" r="55" fill="none" stroke-width="20" class="initials"/>
-  <path d="M150 150a1 1 0 0 0 110 0" fill="none" stroke-width="20" class="initials"/>
+  <circle cx="95" cy="140" r="55" fill="none" stroke-width="20" class="initials"/>
+  <path d="M150 140a1 1 0 0 0 110 0" fill="none" stroke-width="20" class="initials"/>
   <path stroke="#7E3BED" stroke-width="20" d="M30 260h240"/>
   <style>
     .initials{stroke:#000}@media (prefers-color-scheme:dark){.initials{stroke:#fff}}
